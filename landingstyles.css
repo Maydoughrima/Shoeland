@@ -108,54 +108,145 @@ body {
 }
 
 .hero-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: blur(2px);
+  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary);
 }
 
-.hero-text {
+.cards-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  position: relative;
+}
+
+.card-hero1 {
+  width: 100%;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  position: relative;
+}
+
+.card-hero1 img {
+  max-height: 618px;
+  object-fit: cover;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.card-text {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  z-index: 10;
+  color: var(--secondary);
+  border-radius: 1rem;
+  max-width: 700px;
+  font-size: var(--heading-lg);
+  line-height: 5rem;
+  text-transform: capitalize;
+  font-family: 'Poetsen One', sans-serif;
+}
+.card-text-2{
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  padding: 1rem;
+  max-width: 400px;
+}
+.card-text-3{
   position: absolute;
   top: 60%;
-  left: 7%;
-  transform: translateY(-50%);
-  max-width: 40%;
+  left: 5%;
+  padding: 1rem;
+  max-width: 400px;
 }
-
-.hero-text h1 {
-  font-size: var(--heading-lg);
-  color: var(--secondary);
-  font-family: 'Poetsen One', sans-serif;
-  line-height: 3.5rem;
-}
-
-.hero-text span {
-  color: var(--complimentary);
-}
-
-.hero-text p {
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
+.card-text-2 a,
+.card-text-3 a {
   font-size: var(--bd-text);
-  opacity: 0.8;
-  color: var(--secondary);
-}
-
-.hero-text a {
-  background-color: var(--complimentary);
   text-decoration: none;
   color: var(--primary);
-  padding: 0.5rem 1.75rem;
+  background-color: var(--secondary);
+  padding: 0.60rem 1.5rem;
   font-weight: 500;
-  font-size: var(--bd-md);
-  border-radius: 4px;
+  border-radius: 2rem;
+  font-family: 'Raleway', sans-serif;
+}
+.card-text-3 h2 {
+  font-size: var(--heading-sm);
+  line-height: 2rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  font-family: 'Poetsen One', sans-serif;
+}
+.card-text-2 h2 {
+  font-size: var(--heading-sm);
+  line-height: 2rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  font-family: 'Poetsen One', sans-serif;
+}
+.card-text-2 p,
+.card-text-3 p{
+  display: none;
+}
+
+.card-text p,
+.card-text-2 p,
+.card-text-3 p {
+  font-size: var(--bd-text);
+  line-height: 1rem;
+  margin-top: 1rem;
+  opacity: 60%;
+  color: var(--secondary);
+  margin-bottom: -10px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.card-text a {
+  font-size: var(--bd-text);
+  text-decoration: none;
+  color: var(--primary);
+  background-color: var(--secondary);
+  padding: 0.80rem 2rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.card-hero2 {
+  width: 100%;
+  height: auto;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  position: relative;
+}
+
+.card-hero2 img {
+  max-height: 300px;
+  object-fit: cover;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.card-hero3 {
+  width: 100%;
+  height: auto;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  position: relative;
+}
+
+.card-hero3 img {
+  max-height: 300px;
+  object-fit: cover;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 2rem;
 }
 
 .brands {
@@ -201,149 +292,210 @@ body {
   }
 }
 
+@media (max-width: 1187px){
+  .cards-container{
+    align-items: center;
+  }
+  .card-hero3{
+    height: auto;
+  }
+  .card-hero2{
+    height: auto;
+  }
+  .card-text h1{
+    font-size: var(--heading-md);
+    line-height: 3rem;
+  }
+  .card-text p{
+    margin-top: 0.50rem;
+  }
+  .card-text-2{
+    top: 30%;
+  }
+  .card-text-3{
+    top: 40%;
+    max-width: 500px;
+  }
+}
+
 @media (max-width: 1120px) {
   .links a {
     font-size: 0.9rem;
   }
-
-  .hero-text {
-    top: 55%;
-    left: 9%;
-    max-width: 29%;
-  }
-
-  .hero-text h1 {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-  }
-  .hero-text p{
-    margin-top: 0.50rem;
-  }
-  .hero-text a{
-    padding: 0.5rem 1.5rem;
-    font-size: var(--bd-text);
-    font-weight: 600;
-  }
-  .brands-content img{
+  .brands-content img {
     height: 35px;
   }
-  .brands-container{
+  .brands-container {
     padding: 1rem 0rem;
+  }
+  .card-text{
+    max-width: 500px;
   }
 }
 
-@media(max-width:1044px){
-  .hero-container{
-    height: auto;
-    display: flex;
-    flex-direction: column;
-  }
-}
 
 @media (max-width: 960px) {
   .links {
     display: none;
   }
-
   .hamburger {
     display: block;
   }
-
   .mobile-menu.active {
     display: flex;
   }
-
-  .hero-text {
-    left: 10%;
-    top: 55%;
-    max-width: 40%;
+    .cards-container {
+    display: flex;
+    flex-direction: column;
   }
 
-  .hero-text h1 {
-    font-size: 3rem;
-    line-height: 3rem;
-  }
-
-  .hero-text p {
-    font-size: 0.9rem;
+  .card-hero1,
+  .card-hero2,
+  .card-hero3 {
+    min-width: 100%;
   }
 }
-@media (max-width:768px){
-  .navbar{
+
+@media (max-width: 768px) {
+  .navbar {
     padding: 1rem 2rem;
   }
-  .hero-text{
-    left: 8%;
-    top: 55%;
-    max-width: 45%;
-  }
-  .hero-text h1{
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-  }
-  .hero-text p{
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
-  }
-  .hero-text a{
-    padding: 0.5rem 1rem;
-    font-size: var(--bd-text);
-  }
-  .logo-container img{
+  .logo-container img {
     height: 30px;
   }
-  .logo-container p{
+  .logo-container p {
     font-size: 1rem;
   }
-  .icons i{
+  .icons i {
     font-size: 1.2rem;
   }
-  .icons{
+  .icons {
     align-items: center;
   }
-  .brands-content img{
+  .brands-content img {
     height: 25px;
   }
+
+  /* Added responsive bento behavior below */
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-hero1,
+  .card-hero2,
+  .card-hero3 {
+    grid-column: auto;
+    grid-row: auto;
+    width: 100%;
+  }
+  .card-text,
+  .card-text-2,
+  .card-text-3 {
+    position: static;
+    padding: 1.5rem 1rem;
+    background-color: transparent;
+    color: var(--secondary);
+    line-height: 1.8rem;
+    max-width: 900px;
+  }
+  .card-text-2 p,
+  .card-text-3 p{
+    display: block;
+  }
+  .card-text h1 {
+    font-size: var(--heading-sm);
+    line-height: 2.5rem;
+  }
+  .card-text p,
+  .card-text-2 p,
+  .card-text-3 p  {
+    font-size: 0.95rem;
+    opacity: 100%;
+  }
+  .card-text a,
+  .card-text-2 a,
+  .card-text-3 a {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.40rem 2rem;
+  }
+  .card-hero1 img,
+  .card-hero2 img,
+  .card-hero3 img {
+    max-height: 300px;
+  }
 }
-@media (max-width:597px){
-  .hero-text h1{
-    font-size: 2rem;
-    line-height: 2rem;
-  }
-  .hero-text{
-    max-width: 50%;
-    left: 10%;
-  }
-  .hero-text p{
-    font-size: 0.70rem;
-  }
-  .hero-text a{
-    font-size: .80rem;
-  }
-  .brands-container{
+
+@media (max-width: 597px) {
+  .brands-container {
     gap: 3rem;
   }
+    .hero-container{
+    padding: 1rem 2rem;
+  }
+  .card-text h1{
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-top: -10px;
+  }
+  .card-text-2 h2,
+  .card-text-3 h2{
+    font-size: 1rem;
+    line-height:1rem;
+    margin-top: -10px;
+  }
+  .card-text p,
+  .card-text-2 p,
+  .card-text-3 p{
+    font-size: 0.70rem;
+  }
+  .card-text a,
+  .card-text-2 a,
+  .card-text-3 a{
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0.45rem 1.5rem;
+  }
 }
-@media(max-width:425px){
-  .logo-container p{
+
+@media (max-width: 425px) {
+  .logo-container p {
     display: none;
   }
-  .hero-text{
-    max-width: 60%;
+  .hero-container{
+    padding: 1rem 2rem;
   }
-  .hero-text p{
-    margin-top: 0.4rem;
-    font-size: 0.60rem;
-    margin-bottom: 0.6rem;
+  .card-text h1{
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-top: -10px;
   }
-  .hero-text a{
-    font-size: 0.70rem;
-    padding: 0.4rem 0.9rem;
+  .card-text-2 h2,
+  .card-text-3 h2{
+    font-size: 1rem;
+    line-height:1rem;
+    margin-top: -10px;
+  }
+  .card-text p,
+  .card-text-2 p,
+  .card-text-3 p{
+    font-size: 0.80rem;
+  }
+  .card-text a,
+  .card-text-2 a,
+  .card-text-3 a{
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0.45rem 1.5rem;
   }
 }
-@media(max-width:321px){
-  .hero-text h1{
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+
+@media (max-width: 321px) {
+  .card-text a,
+  .card-text-2 a,
+  .card-text-3 a{
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0.35rem 1.5rem;
   }
 }
