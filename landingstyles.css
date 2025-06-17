@@ -169,7 +169,7 @@ body {
   font-size: var(--bd-text);
   text-decoration: none;
   color: var(--primary);
-  background-color: var(--secondary);
+  background-color: var(--complimentary);
   padding: 0.60rem 1.5rem;
   font-weight: 500;
   border-radius: 2rem;
@@ -210,7 +210,7 @@ body {
   font-size: var(--bd-text);
   text-decoration: none;
   color: var(--primary);
-  background-color: var(--secondary);
+  background-color: var(--complimentary);
   padding: 0.80rem 2rem;
   font-weight: 600;
   border-radius: 2rem;
@@ -252,6 +252,7 @@ body {
 .brands {
   overflow: hidden;
   background: var(--primary);
+  padding: 1rem 3rem;
 }
 
 .brands-track {
@@ -264,7 +265,7 @@ body {
   display: flex;
   background-color: var(--primary);
   padding: 2rem 0;
-  gap: 6rem;
+  gap: 3rem;
   width: max-content;
   animation: scroll-left 30s linear infinite;
 }
@@ -282,12 +283,119 @@ body {
   width: auto;
   filter: grayscale(100%);
 }
+.new-arrival-banner{
+  padding: 1rem 3rem;
+}
+.new-a-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.new-a-content img{
+  width: 100%;
+  height: auto;
+  border-radius: 2rem;
+}
+.new-a-content h2{
+  font-size: var(--heading-md);
+  font-family: 'Poetsen One', sans-serif;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  color: var(--secondary);
+}
+.new-a-content p{
+  font-size: var(--bd-text);
+  font-family: 'Raleway', sans-serif;
+  color: var(--secondary);
+  font-weight: 600;
+  margin-top: 0.30rem;
+  margin-bottom: 1rem;
+}
+.new-a-content a{
+  font-size: var(--bd-text);
+  font-family: 'Raleway', sans-serif;
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: none;
+  background-color: var(--complimentary);
+  padding: 0.80rem 2rem;
+  border-radius: 2rem;
+}
+.testimonial{
+  padding: 1rem 3rem;
+  overflow: hidden;
+  background-color: var(--primary);
+}
+.testimonial-header h2{
+  font-family: 'Poetsen One', sans-serif;
+  font-size: var(--heading-md);
+  color: var(--secondary);
+}
+.testimonials-track{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.testimonials-container{
+  display: flex;
+  margin-top: 1rem;
+  gap: 2rem;
+  width: max-content;
+  animation: scroll-left-testimonial 20s linear infinite;
+}
+.test-cards{
+  display: flex;
+  max-width: 630px;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+  border: 1px solid #5BC0BE;
+  border-radius: 24px;
+  gap: 2.3rem;
+}
+.profile-img{
+  width: 116px;
+  height: 116px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.cards-content .stars{
+  color: var(--complimentary);
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.feedback{
+  font-family: 'Raleway', sans-serif;
+  font-size: var(--bd-md);
+  margin-bottom: 10px;
+  color: var(--secondary);
+  font-weight: 600;
+}
+.author{
+  font-size: 0.90rem;
+  color: var(--secondary);
+  opacity: 60%;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+.author span{
+  display: block;
+  font-size: 0.80rem;
+}
 
-@keyframes scroll-left {
+@keyframes scroll-left{
   0% {
     transform: translateX(0%);
   }
   100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes scroll-left-testimonial {
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
     transform: translateX(-50%);
   }
 }
@@ -375,6 +483,12 @@ body {
   .brands-content img {
     height: 25px;
   }
+  .new-a-content h2{
+    font-size: var(--heading-sm);
+  }
+  .new-a-content p{
+    font-size: 0.95rem;
+  }
 
   /* Added responsive bento behavior below */
   .cards-container {
@@ -411,6 +525,7 @@ body {
   .card-text-3 p  {
     font-size: 0.95rem;
     opacity: 100%;
+    line-height: 1.3;
   }
   .card-text a,
   .card-text-2 a,
@@ -424,13 +539,16 @@ body {
   .card-hero3 img {
     max-height: 300px;
   }
+  .new-a-content p{
+    text-align: center;
+  }
 }
 
 @media (max-width: 597px) {
   .brands-container {
     gap: 3rem;
   }
-    .hero-container{
+  .hero-container{
     padding: 1rem 2rem;
   }
   .card-text h1{
@@ -456,6 +574,22 @@ body {
     font-weight: 300;
     padding: 0.45rem 1.5rem;
   }
+  .new-arrival-banner{
+    padding: 1rem 2rem;
+  }
+  .new-a-content h2{
+    font-size: 1rem;
+  }
+  .new-a-content p{
+    font-size: 0.70rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .new-a-content a{
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0.70rem 1rem.5;
+  }
 }
 
 @media (max-width: 425px) {
@@ -464,6 +598,12 @@ body {
   }
   .hero-container{
     padding: 1rem 2rem;
+  }
+  .brands{
+    padding: 1rem 2rem;
+  }
+  .brands-container{
+    gap: 1rem;
   }
   .card-text h1{
     font-size: 1rem;
@@ -488,6 +628,17 @@ body {
     font-weight: 300;
     padding: 0.45rem 1.5rem;
   }
+  .new-arrival-banner{
+    padding: 1rem 2rem;
+  }
+  .new-a-content p{
+    text-align: center;
+    font-size: 0.80rem;
+    font-weight: 500;
+  }
+  .new-a-content a{
+    padding: 0.65rem 1.5rem;
+  }
 }
 
 @media (max-width: 321px) {
@@ -497,5 +648,8 @@ body {
     font-size: 1rem;
     font-weight: 300;
     padding: 0.35rem 1.5rem;
+  }
+  .new-a-content a{
+    padding: 0.65rem 1.5rem;
   }
 }
