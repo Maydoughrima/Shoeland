@@ -511,9 +511,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   margin-top: 2px;
 }
-.banner-aff{
-  padding: 2rem 3rem;
-}
+
 .banner-content{
   background-color: var(--secondary);
   padding: 2rem 1rem;
@@ -534,7 +532,7 @@ body {
 }
 .cta-banner a{
   display: inline-flex;
-  gap: 1rem;
+  gap: .50rem;
   align-items: center;
   font-size: var(--bd-text);
   text-decoration: none;
@@ -543,6 +541,38 @@ body {
 .cta-banner i{
   font-size: var(--bd-text);
 }
+.promo-content{
+  position: relative;
+}
+.promo-text-block{
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  max-width: 450px;
+}
+.promo-text-block h2{
+  font-size: var(--heading-md);
+  font-family: 'Poetsen One', sans-serif;
+  color: var(--primary);
+  line-height: 3rem;
+  margin-bottom: 1rem;
+}
+.promo-text-block a{
+  text-decoration: none;
+  color: var(--primary);
+  background-color: var(--complimentary);
+  padding: 0.60rem 2rem;
+  border-radius: 2rem;
+}
+.promo-content img{
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+
+
+
+
 @keyframes scroll-left{
   0% {
     transform: translateX(0%);
@@ -634,6 +664,12 @@ body {
   .cta-banner{
     border-radius: 2rem;
   }
+  .promo-text-block{
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  max-width: 300px;
+}
 }
 
 @media (max-width: 768px) {
@@ -745,9 +781,6 @@ body {
   .Sales-section{
     padding: 1rem 2rem;
   }
-  .banner-aff{
-    padding: 1rem 2rem;
-  }
   .banner-content h2{
     font-size: var(--heading-sm);
   }
@@ -761,6 +794,16 @@ body {
   }
   .cta-banner i{
     font-size: 0.70rem;
+  }
+  .promo-text-block{
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  max-width: 300px;
+  }
+  .promo-text-block h2{
+    font-size: var(--heading-sm);
+    line-height: 2rem;
   }
 }
 
@@ -853,6 +896,19 @@ body {
 .cta-banner{
   border-radius: 16px;
 }
+  .promo-text-block{
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  max-width: 250px;
+  }
+  .promo-text-block h2{
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+  .promo-text-block a{
+    padding: 0.50rem 1.5rem;
+  }
 }
 
 @media (max-width: 425px) {
@@ -976,6 +1032,21 @@ body {
   border-radius: 16px;
   align-items: center;
 }
+  .promo-text-block{
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  max-width: 150px;
+  }
+  .promo-text-block h2{
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .promo-text-block a{
+    padding: 0.40rem 1rem;
+    font-size: 0.80rem;
+  }
 }
 
 
@@ -1008,4 +1079,19 @@ body {
   transition: background 0.3s, color 0.3s;
   cursor: pointer;
 }
+  .promo-text-block{
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  max-width: 150px;
+  }
+  .promo-text-block h2{
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .promo-text-block a{
+    padding: 0.30rem 0.90rem;
+    font-size: 0.70rem;
+  }
 }
