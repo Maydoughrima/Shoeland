@@ -322,7 +322,7 @@ body {
   border-radius: 2rem;
 }
 .testimonial{
-  padding: 1rem 3rem;
+  padding: 2rem 3rem;
   overflow: hidden;
   background-color: var(--primary);
 }
@@ -382,7 +382,167 @@ body {
   display: block;
   font-size: 0.80rem;
 }
+.Sales-section{
+  background-color: var(--primary);
+  padding: 2rem 3rem;
+}
+.sales-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.sales-track{
+  width: 100%;
+  overflow-x: auto;
+  position: relative;
+  padding: 1rem 0;
+}
+.sales-container{
+  display: flex;
+  width: max-content;
+}
+.sales-header h2{
+  font-size: var(--heading-lg);
+  font-family: 'Poetsen One', sans-serif;
+  color: var(--secondary);
+}
+.cta-group-ctn{
+  display: flex;
+  background-color: #E8E8EA;
+  padding: 0.60rem 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 500px;
+}
+.ctaU,
+.ctaM,
+.ctaW,
+.ctaK {
+  padding: 0.63rem 1rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: var(--bd-sm);
+  border-radius: 8px;
+  color: #bebebe;
+  background-color: transparent;
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
+}
+.ctaU.active,
+.ctaM.active,
+.ctaW.active,
+.ctaK.active {
+  background-color: var(--complimentary);
+  color: var(--primary);
+}
+.prod-cards-container{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.prod-cards-container::-webkit-scrollbar {
+  height: 8px;
+  background: transparent;
+}
 
+.prod-cards-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+.prod-cards-container:hover {
+  scrollbar-color: var(--complimentary) transparent;
+}
+
+.prod-cards-container:hover::-webkit-scrollbar-thumb {
+  background-color: var(--complimentary);
+}
+.cards-prod{
+  flex: 0 0 auto;
+  width: 300px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+.prod-img{
+  position: relative;
+  background-color: #E8E8EA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+.prod-img img{
+  width: 80%;
+  object-fit: contain;
+}
+.prod-rate{
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  font-size: 1.5rem;
+  color: var(--complimentary);
+}
+.prod-info{
+  padding-top: 1rem;
+}
+.prod-info h3{
+ font-family: 'Raleway', sans-serif;
+ color: var(--secondary);
+ text-transform: uppercase;
+}
+.prod-cat{
+  margin-top: 8px;
+  font-family: 'Raleway', sans-serif;
+  font-size: var(--bd-text);
+  text-transform: uppercase;
+}
+.prod-price{
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 2px;
+}
+.banner-aff{
+  padding: 2rem 3rem;
+}
+.banner-content{
+  background-color: var(--secondary);
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.banner-content h2{
+  font-family: 'Poetsen One', sans-serif;
+  color: var(--primary);
+  font-size: var(--heading-md);
+}
+.cta-banner{
+  padding: 0.80rem 2rem;
+  background-color: var(--complimentary);
+  border-radius: 2rem;
+}
+.cta-banner a{
+  display: inline-flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: var(--bd-text);
+  text-decoration: none;
+  color: var(--primary);
+}
+.cta-banner i{
+  font-size: var(--bd-text);
+}
 @keyframes scroll-left{
   0% {
     transform: translateX(0%);
@@ -439,6 +599,9 @@ body {
   .card-text{
     max-width: 500px;
   }
+  .banner-content{
+    gap: 1rem;
+  }
 }
 
 
@@ -461,6 +624,15 @@ body {
   .card-hero2,
   .card-hero3 {
     min-width: 100%;
+  }
+  .banner-content h2{
+    font-size: 2rem;
+  }
+  .cta-banner a{
+    gap:0.80rem;
+  }
+  .cta-banner{
+    border-radius: 2rem;
   }
 }
 
@@ -542,6 +714,54 @@ body {
   .new-a-content p{
     text-align: center;
   }
+  .testimonial{
+    padding: 1rem 2rem;
+  }
+  .testimonial-header h2{
+    font-size: var(--heading-sm);
+  }
+  .test-cards{
+    max-width: 300px;
+  }
+  .profile-img{
+    width: 58px;
+    height: 58px;
+  }
+  .cards-content .stars{
+    font-size: 0.80rem;
+  }
+  .feedback{
+    font-size: var(--bd-text);
+  }
+  .author{
+    font-size: 0.80rem;
+  }
+  .author span{
+    font-size: 0.70rem;
+  }
+  .sales-header h2{
+    font-size: var(--heading-sm);
+  }
+  .Sales-section{
+    padding: 1rem 2rem;
+  }
+  .banner-aff{
+    padding: 1rem 2rem;
+  }
+  .banner-content h2{
+    font-size: var(--heading-sm);
+  }
+  .cta-banner{
+    padding: 0.50rem 0.80rem;
+    border-radius: 2rem;
+  }
+  .cta-banner a{
+    gap: 0.50rem;
+    font-size: 0.80rem;
+  }
+  .cta-banner i{
+    font-size: 0.70rem;
+  }
 }
 
 @media (max-width: 597px) {
@@ -590,6 +810,49 @@ body {
     font-weight: 300;
     padding: 0.70rem 1rem.5;
   }
+    .cta-group-ctn{
+    padding: 0.40rem 0.90rem;
+    border-radius: 8px;
+    gap: 0.40rem;
+  }
+  .ctaU,
+  .ctaM,
+  .ctaW,
+  .ctaK {
+  padding: 0.43rem 0.90rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: var(--bd-text);
+  border-radius: 8px;
+  color: #bebebe;
+  background-color: transparent;
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
+}
+.cards-prod{
+  width: 200px;
+}
+.prod-img{
+  height: 200px;
+}
+.prod-info h3{
+  font-size: var(--bd-sm);
+}
+.prod-cat{
+  font-size: 0.80rem;
+}
+.prod-price{
+  font-size: 0.70rem;
+}
+.banner-content{
+  display: flex;
+  flex-direction: column;
+}
+.banner-content h2{
+  text-align: center;
+}
+.cta-banner{
+  border-radius: 16px;
+}
 }
 
 @media (max-width: 425px) {
@@ -639,7 +902,82 @@ body {
   .new-a-content a{
     padding: 0.65rem 1.5rem;
   }
+  .testimonial-header h2{
+  font-size: 1rem;
 }
+.test-cards{
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profile-img{
+  width: 50px;
+  height: 50px;
+}
+.cards-content .stars{
+  font-size: 0.50rem;
+  align-self: center;
+  margin-top: -20px;
+}
+.feedback{
+  font-size: 0.80rem;
+}
+.author{
+  font-size: 0.70rem;
+}
+.author span{
+  font-size: 0.60rem;
+}
+.testimonials-container{
+  animation: scroll-left-testimonial 10s linear infinite;
+  gap: 1rem;
+  width: max-content;
+}
+.cta-group-ctn{
+  padding: 0.30rem 0.80rem;
+  border-radius: 8px;
+  gap: 0.20rem;
+  overflow: hidden;
+}
+.ctaU,
+.ctaM,
+.ctaW,
+.ctaK {
+  padding: 0.43rem 0.70rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.80rem;
+  border-radius: 8px;
+  color: #bebebe;
+  background-color: transparent;
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
+}
+.cards-prod{
+  width: 150px;
+}
+.prod-img{
+  height: 150px;
+}
+.prod-info h3{
+  font-size: 0.90rem;
+}
+.prod-cat{
+  font-size: 0.70rem;
+}
+.prod-price{
+  font-size: 0.60rem;
+}
+.prod-rate{
+  font-size: 1rem;
+}
+.cta-banner{
+  border-radius: 16px;
+  align-items: center;
+}
+}
+
 
 @media (max-width: 321px) {
   .card-text a,
@@ -652,4 +990,22 @@ body {
   .new-a-content a{
     padding: 0.65rem 1.5rem;
   }
+  .cta-group-ctn{
+  padding: 0.30rem 0.60rem;
+  border-radius: 8px;
+  gap: 0.10rem;
+}
+.ctaU,
+.ctaM,
+.ctaW,
+.ctaK {
+  padding: 0.43rem 0.50rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.70rem;
+  border-radius: 8px;
+  color: #bebebe;
+  background-color: transparent;
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
+}
 }
