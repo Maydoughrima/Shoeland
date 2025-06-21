@@ -1,20 +1,29 @@
 const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobile-menu')
+const mobileMenu = document.getElementById('mobile-menu');
+const closeMenu = document.getElementById('close-menu'); // Make sure this exists in your HTML
 
-hamburger.addEventListener('click',()=>{
-    mobileMenu.classList.toggle('active');
+// Open menu
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.add('active');
+  document.body.classList.add('no-scroll'); // Prevent background scroll
 });
 
-  const ctaButtons = document.querySelectorAll('.ctaU, .ctaM, .ctaW, .ctaK');
+// Close menu
+closeMenu.addEventListener('click', () => {
+  mobileMenu.classList.remove('active');
+  document.body.classList.remove('no-scroll'); // Allow scroll again
+});
 
-  ctaButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      // Remove 'active' class from all
-      ctaButtons.forEach(btn => btn.classList.remove('active'));
+// CTA button activation (this part looks good)
+const ctaButtons = document.querySelectorAll('.ctaU, .ctaM, .ctaW, .ctaK');
 
-      // Add 'active' to the clicked one
-      button.classList.add('active');
-    });
+ctaButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    ctaButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
   });
+});
+
+  
 
   
