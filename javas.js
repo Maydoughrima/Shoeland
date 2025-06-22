@@ -25,5 +25,3 @@ ctaButtons.forEach(button => {
 });
 
   
-
-  
