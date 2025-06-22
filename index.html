@@ -23,6 +23,7 @@
   <body>
     <nav class="navbar">
       <div class="navbar-container">
+        <!-- Logo -->
         <div class="logo-container">
           <img
             src="assets/images/shoelandAsset 1.svg"
@@ -31,6 +32,8 @@
           />
           <p>SHOELAND.CO</p>
         </div>
+
+        <!-- Navigation Links (Desktop) -->
         <div class="links">
           <a href="#">Home</a>
           <a href="#">Brands</a>
@@ -39,23 +42,47 @@
           <a href="#">Women</a>
           <a href="#">Kids</a>
         </div>
+
+        <!-- Right Side (Search, Cart, User, Hamburger) -->
         <div class="to-right">
           <div class="icons">
-            <div class="search-container">
-              <a href="#"><i class="ph-bold ph-magnifying-glass" id="search-toggle"></i></a>
-              <input type="text" placeholder="Search">
+            <!-- Search with Fullscreen Overlay -->
+            <div class="search-container" id="search-container">
+              <a href="#"
+                ><i class="ph-bold ph-magnifying-glass" id="search-toggle"></i
+              ></a>
+
+              <!-- Fullscreen Search Overlay -->
+              <div class="search-overlay" id="open-page">
+                <div class="input-group">
+                  <input type="text" placeholder="Search" id="search-input" />
+                  <button id="close-search">
+                    <i class="ph-bold ph-x"></i>
+                  </button>
+                </div>
+              </div>
             </div>
+
+            <!-- Cart Icon -->
             <a href="#"><i class="ph-bold ph-shopping-cart"></i></a>
+
+            <!-- User Icon -->
             <a href="#"><i class="ph-bold ph-user"></i></a>
           </div>
+
+          <!-- Hamburger Menu (Mobile Only) -->
           <div class="hamburger" id="hamburger">
             <i class="ph-bold ph-list"></i>
           </div>
         </div>
       </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
     <div class="mobile-menu" id="mobile-menu">
-        <button class="close-menu" id="close-menu">&times;</button>
+      <button class="close-menu" id="close-menu">
+        <i class="ph-bold ph-x"></i>
+      </button>
       <a href="#">Home</a>
       <a href="#">Brands</a>
       <a href="#">New Arrival</a>
