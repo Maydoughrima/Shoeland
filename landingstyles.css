@@ -224,8 +224,8 @@ body.no-scroll {
 .card-text-3 p {
   font-size: var(--bd-text);
   line-height: 1rem;
-  margin-top: 1rem;
-  opacity: 60%;
+  margin-top: 2rem;
+  opacity: 80%;
   color: var(--secondary);
   margin-bottom: -10px;
   font-family: "Raleway", sans-serif;
@@ -310,6 +310,7 @@ body.no-scroll {
 }
 .new-arrival-banner {
   padding: 1rem 3rem;
+  background-color: var(--primary);
 }
 .new-a-content {
   display: flex;
@@ -514,7 +515,7 @@ body.no-scroll {
   color: var(--complimentary);
 }
 .prod-info {
-  padding-top: 1rem;
+  padding: 1rem 1rem;
 }
 .prod-info h3 {
   font-family: "Raleway", sans-serif;
@@ -794,88 +795,7 @@ body.no-scroll {
   }
 }
 
-@media (max-width: 960px) {
-  .links {
-    display: none;
-  }
-  .hamburger {
-    display: block;
-  }
-  .mobile-menu.active {
-    display: flex;
-    z-index: 1;
-  }
-  .cards-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card-hero1,
-  .card-hero2,
-  .card-hero3 {
-    min-width: 100%;
-  }
-  .banner-content h2 {
-    font-size: 2rem;
-  }
-  .cta-banner a {
-    gap: 0.8rem;
-  }
-  .cta-banner {
-    border-radius: 2rem;
-  }
-  .promo-text-block {
-    position: absolute;
-    top: 30%;
-    left: 5%;
-    max-width: 300px;
-  }
-  .top-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  .mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: var(--secondary);
-    z-index: 999;
-    padding: 2rem 3rem;
-    gap: 1.5rem;
-
-    display: flex;
-    flex-direction: column;
-
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .mobile-menu.active {
-    transform: translateX(0);
-    opacity: 1;
-    pointer-events: auto;
-    z-index: 9999;
-  }
-
-  .mobile-menu a {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: var(--primary);
-  }
-
-  .close-menu {
-    font-size: 2rem;
-    background: none;
-    border: none;
-    align-self: flex-end;
-    cursor: pointer;
-    color: var(--primary);
-  }
+@media (max-width: 1118px) {
   .search-overlay {
     position: fixed;
     top: 0;
@@ -927,6 +847,90 @@ body.no-scroll {
     font-size: 1rem;
     border: 1px solid var(--secondary);
     border-radius: 8px;
+  }
+}
+
+@media (max-width: 960px) {
+  .links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .mobile-menu.active {
+    display: flex;
+    z-index: 1;
+  }
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-hero1,
+  .card-hero2,
+  .card-hero3 {
+    min-width: 100%;
+  }
+  .banner-content h2 {
+    font-size: 2rem;
+  }
+  .cta-banner a {
+    gap: 0.8rem;
+  }
+  .cta-banner {
+    border-radius: 2rem;
+  }
+  .promo-text-block {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    max-width: 300px;
+  }
+  .top-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--primary);
+    z-index: 999;
+    padding: 2rem 3rem;
+    gap: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .mobile-menu.active {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 9999;
+  }
+
+  .mobile-menu a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--secondary);
+  }
+
+  .close-menu {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    align-self: flex-end;
+    cursor: pointer;
+    color: var(--secondary);
   }
 }
 
@@ -1380,6 +1384,12 @@ body.no-scroll {
   }
   .bottom-content a {
     font-size: 0.8rem;
+  }
+  .icons{
+    gap: 0.40rem;
+  }
+  .search-container{
+    width: 1.2rem;
   }
 }
 

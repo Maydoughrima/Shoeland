@@ -30,7 +30,7 @@ const closeSearch = document.getElementById('close-search');
 const searchOverlay = document.getElementById('open-page');
 
 searchIcon.addEventListener('click', () => {
-  if (window.innerWidth <= 960) {
+  if (window.innerWidth <= 1118) {
     searchOverlay.classList.add('active');
     document.body.classList.add('no-scroll');
     searchInput.focus();
